@@ -19,30 +19,15 @@
           <span class="id-column">ID</span>
           <span>List</span>
         </div>
-        <% const item = {id: 4, name: 'tomato'} %>
+        <% const items = [ {id: 1, name: 'potato'}, {id: 2, name:
+        'carrot'}, {id: 3, name: 'onion'} ]; %>
         <ul class="table-body">
+          <% items.forEach((item) => { %>
           <li>
-            <span class="id-column">1</span>
-            <span class="name-column">Potato</span>
+            <span class="id-column"><%= item.id %></span>
+            <span class="name-column"><%= item.name %></span>
           </li>
-          <li>
-            <span class="id-column">2</span>
-            <span class="name-column">Carrot</span>
-          </li>
-          <li>
-            <span class="id-column">3</span>
-            <span class="name-column">Onion</span>
-          </li>
-          <li>
-            <span class="id-column">
-              <!-- show property values item's id  -->
-              <%= item.id %>
-            </span>
-            <span class="name-column">
-              <!-- show property values item's name -->
-              <%= item.name %>
-            </span>
-          </li>
+          <% }); %>
         </ul>
       </div>
     </div>
