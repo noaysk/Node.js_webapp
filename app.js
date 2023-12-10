@@ -1,9 +1,15 @@
 const express = require('express');
 const app = express();
 
+app.use(express.static('public'));
+
 app.get('/', (req, res) => {
-  // top 
   res.render('hello.ejs');
+});
+
+app.get('/top', (req, res) => {
+  // top 
+  res.render('top.ejs');
 });
 
 // Code to start the server
