@@ -9,13 +9,13 @@ const res = require('express').response;
 mysql.originalCreateConnection = mysql.createConnection;
 res.originalRedirect = res.redirect;
 
-// app.listen を上書き
+// Override app.listen
 app.listen = function listen(port) {
   var server = http.createServer(this);
   return server.listen.apply(server, [3000]);
 };
 
-// createConnection を上書き
+// Override createConnection
 mysql.createConnection = function createConnection(config) {
   var _this = this;
   if (process.env.IDENTIFIER === 'ANSWER'){
@@ -24,7 +24,7 @@ mysql.createConnection = function createConnection(config) {
   return mysql.originalCreateConnection.call(_this, config);
 }
 
-// res.redirect を上書き
+// Override res.redirect
 res.redirect = function redirect(url) {
   var _this = this;
   new_url = url + "?containerPort=3000&languageName=nodejs";

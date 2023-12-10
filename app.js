@@ -2,8 +2,9 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
+  // top 
   res.render('hello.ejs');
 });
 
-// サーバーを起動するコードを貼り付けてください
+// Code to start the server
 app.listen(3000);
