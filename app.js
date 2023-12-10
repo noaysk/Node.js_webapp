@@ -12,5 +12,10 @@ app.get('/top', (req, res) => {
   res.render('top.ejs');
 });
 
+// list view
+app.get('/index', (req, res) => {
+  res.render('index.ejs');
+});
+
 // Code to start the server
 app.listen(3000);
