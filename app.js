@@ -32,6 +32,13 @@ app.get("/index", (req, res) => {
     res.render("index.ejs", { items: results });
   });
 });
+
+// create
+app.get('/new', (req, res) => {
+  res.render('new.ejs');
+});
+
+
 // Code to start the server
 app.listen(3000);
 
