@@ -43,13 +43,13 @@ app.get("/new", (req, res) => {
 
 app.post("/create", (req, res) => {
   connection.query(            
-    'insert into items (name) values(?)',            
-    [req.body.itemName],            
+    'insert into items (number, name) values(?, ?)',            
+    [req.body.itemNum, req.body.itemName],            
      (error, results) => {            
       connection.query(   
         'SELECT * FROM items',            
         (error, results) => {     
-          console.log(req.body.itemName);       
+          console.log(req.body.itemNum, req.body.itemName);       
          res.render('index.ejs', {items: results});            
      }            
     );              

@@ -15,8 +15,10 @@
         <h1>Create Buying List</h1>
       </div>
       <div class="item-form-wrapper">
-        <p class="form-label">Name</p>
         <form action="/create" method="post">
+          <p class="form-label">Number</p>
+          <input name="itemNum" type="number" />
+          <p class="form-label">Name</p>
           <input name="itemName" type="text" />
           <input type="submit" value="Confirm" />
         </form>

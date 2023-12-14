@@ -198,10 +198,15 @@
   }
   
   .id-column {
-    width: 72px;
+    width: 122px;
     text-align: center;
   }
   
+  .name-column {
+    width: 147px;
+    text-align: center;
+  }
+
   .table-body {
     background-color: #ffffff;
   }
