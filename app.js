@@ -9,9 +9,9 @@ const mysql = require("mysql2");
 
 const connection = mysql.createConnection({
   host: process.env.DB_HOST,
-     user: process.env.DB_USER,
-     database: process.env.DB_NAME,
-     password: process.env.DB_PASSWORD,
+  user: process.env.DB_USER,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
 });
 
 // require("dotenv").config();
@@ -42,22 +42,13 @@ app.get("/new", (req, res) => {
 });
 
 app.post("/create", (req, res) => {
-  connection.query(            
-    'insert into items (number, name) values(?, ?)',            
-    [req.body.itemNum, req.body.itemName],            
-     (error, results) => {            
-      connection.query(   
-        'SELECT * FROM items',            
-        (error, results) => {     
-          console.log(req.body.itemNum, req.body.itemName);       
-         res.render('index.ejs', {items: results});            
-     }            
-    );              
-     }            
-   );  
-
-  
-  
+  connection.query(
+    "insert into items (number, name) values(?, ?)",
+    [req.body.itemNum, req.body.itemName],
+    (error, results) => {
+      res.redirect("/index");
+    }
+  );
 });
 
 // Code to start the server
