@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>LIST APP</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
     <script src="/send_url.js"></script>
   </head>
   <body>
@@ -16,8 +16,10 @@
       </div>
       <div class="item-form-wrapper">
         <p class="form-label">Name</p>
-        <input type="text">
-        <input type="submit" value="Confirm">
+        <form action="/create" method="post">
+          <input name="itemName" type="text" />
+          <input type="submit" value="Confirm" />
+        </form>
       </div>
       <a href="/index" class="cancel-button">Back</a>
     </div>
