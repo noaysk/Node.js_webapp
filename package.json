@@ -2,13 +2,13 @@
   "name": "nodejs_lesson",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "engines": {
     "node": "18.x"
   },
   "scripts": {
     "eslint": "eslint ./",
-    "start": "node app.js"
+    "start": "node index.js"
   },
   "author": "Progate",
   "license": "ISC",
