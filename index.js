@@ -14,16 +14,6 @@ const connection = mysql.createConnection({
   password: process.env.DB_PASSWORD,
 });
 
-// require("dotenv").config();
-
-// const mysql = require("mysql2");
-// const pool = mysql.createPool({
-//   host: process.env.DB_HOST,
-//   user: process.env.DB_USER,
-//   database: process.env.DB_NAME,
-//   password: process.env.DB_PASSWORD,
-// });
-
 // top
 app.get("/", (req, res) => {
   res.render("top.ejs");
@@ -52,6 +42,5 @@ app.post("/create", (req, res) => {
 });
 
 // Code to start the server
-app.listen(3000);
-
-// module, (exports = pool.promise());
+const port = process.env.PORT || 3000;
+app.listen(port, ()=>console.log(`Listening to port ${port}`));
