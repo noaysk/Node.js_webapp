@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "eslint": "eslint ./",
-    "start": "nodemon -r './.module' ./app.js"
+    "start": "node app.js"
   },
   "author": "Progate",
   "license": "ISC",

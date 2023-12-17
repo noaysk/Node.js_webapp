@@ -50,14 +50,3 @@ npm install mysql
 res.redirectメソッド
 res.redirect('/index');
 リダイレクトを使う場面はいくつかありますが、よくあるのは今回のようにpostメソッドでリクエストした時です。こういう時はres.renderではなくres.redirectを使って、getのルーティングにリダイレクトしてあげましょう。
-
-
-# NODE APP ENVIRONMENT VARIAVLES
-NODE_ENV=development
-PORT=3000
-
-# DATABASE CONNECTION ENVIRONMENT VARIABLES
-DB_HOST=localhost
-DB_USER=root
-DB_NAME=myshema
-DB_PASSWORD=noay1003
